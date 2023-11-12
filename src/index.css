@@ -211,3 +211,347 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+.about-main{
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+.overview{
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 6px;
+  padding: 13px 13px;
+}
+.experience{
+  text-align: center;
+}
+
+/* about */
+:root {
+  --card-height: 300px;
+  --card-width: calc(var(--card-height) / 1);
+}
+/* * {
+  box-sizing: border-box; 
+ } */
+
+ .about-app{
+  /* margin-top:20%; */
+ }
+.about-mid{
+  text-align: center;
+  margin:15% auto auto auto;
+  width: 50%;
+}
+.about {
+  /* width: 100vw;
+  height: 100vh; */
+  width: 50%;
+  height: 50%;
+  /* margin: 0; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* background: #191c29; */
+}
+.card-about {
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
+}
+
+.cover-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.card-about:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+.wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.card-about:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.card-about:hover .wrapper::after {
+  height: 120px;
+}
+.title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+.card-about:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.card-about:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+
+
+
+
+/* experienc */
+.card-exp {
+  width: 300px;
+  height: 450px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 1s;
+}
+
+.card-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background: url(https://www.freepik.com/free-vector/programming-concept-illustration_7118756.htm#query=web%20dev&position=1&from_view=search&track=ais); */
+  background-size: cover;
+  border-radius: 20px;
+  transform: translateZ(40px);
+}
+
+.card-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, -40px) rotateY(180deg);
+  width: 85%;
+  height: 87%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 5px solid #fff;
+}
+
+.card-exp:hover {
+  transform: rotateY(180deg);
+}
+
+.card-body .bg {
+  position: absolute;
+  background: #fff;
+  border-radius: 100px;
+  width: 0%;
+  transition: .5s;
+}
+
+.card-body .bg:nth-child(1) {
+  height: 25%;
+  transform-origin: left;
+  top: 0;
+  left: -30%;
+  transform: rotate(-10deg);
+}
+
+.card-body .bg:nth-child(2) {
+  height: 50%;
+  transform-origin: right;
+  top: 5%;
+  right: -30%;
+  transform: rotate(-10deg);
+}
+
+.card-body .bg:nth-child(3) {
+  height: 50%;
+  transform-origin: left;
+  top: 70%;
+  left: -30%;
+  transform: rotate(-10deg);
+}
+
+.card-exp:hover .card-body .bg {
+  width: 200%;
+  transition-delay: 1s;
+}
+
+.card-exp:hover .card-body .bg:nth-child(2) {
+  transition-delay: 1.5s;
+}
+
+.card-exp:hover .card-body .bg:nth-child(3) {
+  transition-delay: 2s;
+}
+
+.content {
+  position: relative;
+  opacity: 0;
+  transition: .5s;
+  padding: 40px 10px;
+  text-align: center;
+}
+
+.title-exp {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #292929;
+  text-transform: uppercase;
+}
+.para {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #292929;
+  text-transform: uppercase;
+}
+
+.card-exp:hover .content {
+  opacity: 1;
+  transition-delay: 2.5s;
+}
+
+
+/* projects */
+.card {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 50px 20px 0;
+  /* background-color: wheat; */
+}
+
+.card__item {
+  width: 29%;
+  margin: 10px 20px;
+}
+
+.card__item-title {
+  text-align: center;
+  color: #fff;
+  font-weight: normal;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.atvImg {
+  border-radius: 5px;
+  transform-style: preserve-3d;
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  height: 350px;
+  display: inline-block;
+}
+.atvImg img {
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(14, 21, 47, 0.25);
+}
+
+.atvImg-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: all 0.2s ease-out;
+}
+.atvImg-container.over .atvImg-shadow {
+  box-shadow: 0 45px 100px rgba(14, 21, 47, 0.4), 0 16px 40px rgba(14, 21, 47, 0.4);
+}
+
+.atvImg-layers {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.atvImg-rendered-layer {
+  position: absolute;
+  width: 104%;
+  height: 104%;
+  top: -2%;
+  left: -2%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-size: cover;
+  transition: all 0.1s ease-out;
+}
+
+.atvImg-shadow {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  transition: all 0.2s ease-out;
+  box-shadow: 0 8px 30px rgba(14, 21, 47, 0.6);
+}
+
+.atvImg-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 60%);
+}
+
+.exp-over{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
