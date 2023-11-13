@@ -2,8 +2,8 @@ import React from "react";
 import { styles } from "../styles";
 import a from "../assets/overview/a.jpg";
 import b from "../assets/overview/b.jpg";
-import c from "../assets/overview/c.jpeg";
-import d from "../assets/overview/d.jpeg";
+import oa from "../assets/overview/oa.png";
+import ob from "../assets/overview/ob.png"
 // import Tilt from 'react-tilt' ;
 
 const About = () => {
@@ -29,7 +29,7 @@ const About = () => {
                 />
               </div>
               <img
-                src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png"
+                src={oa}
                 className="title"
               />
               <img
@@ -52,7 +52,7 @@ const About = () => {
                 />
               </div>
               <img
-                src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png"
+                src={ob}
                 className="title"
               />
               <img

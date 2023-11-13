@@ -461,7 +461,7 @@ const Works = () => {
       <div className="container">
       <div className="card">
           <div className="card__item">
-            <h2 className="card__item-title">Vacation</h2>
+            <h2 className="card__item-title">Crave_Mate</h2>
             <a
               href="https://dribbble.com/shots/2792589-Time-for-a-vacation"
               title="Time for a vacation"
@@ -476,7 +476,7 @@ const Works = () => {
             </a>
           </div>
           <div className="card__item">
-            <h2 className="card__item-title">Engineering</h2>
+            <h2 className="card__item-title">Meal_Guardian</h2>
             <a
               href="https://dribbble.com/shots/2787693-Singha-Durbar"
               title="Singha Durbar"
